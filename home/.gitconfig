@@ -11,3 +11,5 @@
 [user]
 	email = goncalo.neto@webdetails.pt
 	name = Gundi
+[core]
+	excludesfile = ~/.gitignore
