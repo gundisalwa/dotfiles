@@ -1,6 +1,8 @@
 # Some stuff was taken from
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
+echo '\tTweaking OS X...'
+
 # Main
 # ====
 

@@ -3,14 +3,14 @@
 # A simple script for setting up OSX dev environment.
 git pull origin master
 
-read 'hostname?Enter new hostname of the machine (e.g. bokar) [s to skip]'
-  if [[ "$hostname" =~ ^[s]$ ]]; then
-    echo "Skipping hostname..."
+read 'hostname?Enter new hostname of the machine (e.g. bokar) [n to skip]'
+  if [[ "$hostname" =~ ^[n]$ ]]; then
+    echo "\tSkipping hostname..."
   else
-    echo "Setting new hostname to $hostname..."
+    echo "\tSetting new hostname to $hostname..."
     scutil --set HostName "$hostname"
     compname=$(sudo scutil --get HostName | tr '-' '.')
-    echo "Setting computer name to $compname"
+    echo "\tSetting computer name to $compname"
     scutil --set ComputerName "$compname"
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$compname"
   fi
@@ -23,6 +23,9 @@ echo 'Checking for SSH key, generating one if it does not exist...'
 #  [[ -f $pub ]] && cat $pub | pbcopy
 #  open 'https://github.com/account/ssh'
 
+# Change to scripts dir
+cd etc
+
 # If we on OS X, install homebrew and tweak system a bit.
 which -s brew
 if [[ $? != 0 ]]; then
@@ -31,32 +34,38 @@ if [[ $? != 0 ]]; then
 fi
 
 read 'brewReply?Install bundle from etc/Brewfile? [y/n] '
-  if [[ "$brewReply" =~ ^[Yy]$ ]]; then
-    echo 'Installing Brewfile bundle...'
-    brew bundle 'etc/Brewfile'
-  fi
+if [[ "$brewReply" =~ ^[Yy]$ ]]; then
+  source brew.sh
+else
+  echo "\tSkipping brews..."
+fi
 
-read 'osxReply?Tweaking OS X? [y/n] '
+read 'osxReply?Tweak OS X? [y/n] '
 if [[ "$osxReply" =~ ^[Yy]$ ]]; then
-  echo "Tweaing OS X..."
-  source 'etc/osx.sh'
+  source osx.sh
+else
+  echo "\tSkipping OS X tweak..."
 fi
  
 read 'caskReply?Install casks from etc/Caskfile? [y/n] '
 if [[ "$caskReply" =~ ^[Yy]$ ]]; then
-  echo 'Installing Caskfile bundle...'
-  brew bundle 'etc/Caskfile'
+  source cask.sh
+else
+  echo "\tSkipping casks..."
 fi
 
 read 'omzReply?Install oh-my-zsh? [y/n] '
 if [[ "$omzReply" =~ ^[Yy]$ ]]; then
-  git clone 'https://github.com/robbyrussell/oh-my-zsh.git' '${HOME}/.oh-my-zsh'
+  source omz.sh
+else
+  echo "\tSkipping oh-my-zsh install..."
 fi
 
-read "dotfilesReply?Copying dotfiles to your home folder. Are you sure? [y/n] "
+read "dotfilesReply?Copy dotfiles to home folder? [y/n] "
 if [[ "$dotfilesReply" =~ ^[Yy]$ ]]; then
-  cp 'home/*' '${HOME}'
-  source '${HOME}/.zshrc'
+  source home.sh
+else
+  echo "\tSkipping dotfiles copy..."
 fi
 
 
