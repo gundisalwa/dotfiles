@@ -8,3 +8,6 @@
   dump = cat-file -p
 [init]
 	templatedir = ~/.git_template
+[user]
+	email = goncalo.neto@webdetails.pt
+	name = Gundi
