@@ -35,7 +35,8 @@ install homebrew/dupes/grep
 # install homebrew/dupes/screen
 
 # Install other useful binaries
-# 
+install node
+install ant
 
 # Remove outdated versions from the cellar
 cleanup
