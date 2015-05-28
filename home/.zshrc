@@ -37,7 +37,7 @@ ZSH_THEME="gundi"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="mm/dd/yyyy"
@@ -52,17 +52,16 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Alias
-alias sbl='open -a "Sublime Text"'
 alias gx='open -a "Gitx"'
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/npm:$PATH
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/npm
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='sbl -w'
+  export EDITOR='sbl'
 fi
 
 # Compilation flags
@@ -77,3 +76,5 @@ export CHROME_BIN=/Applications/Chrome.app/Contents/MacOS/Google\ Chrome
 # Node Modules Path
 export NODE_PATH=/usr/local/lib/node_modules
 
+# Postgres.app to path
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
