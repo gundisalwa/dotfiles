@@ -40,6 +40,13 @@ else
   echo "\tSkipping brews..."
 fi
 
+read 'npmReply?Tweak OS X? [y/n] '
+if [[ "$npmReply" =~ ^[Yy]$ ]]; then
+  source npm.sh
+else
+  echo "\tSkipping npm globals..."
+fi
+
 read 'osxReply?Tweak OS X? [y/n] '
 if [[ "$osxReply" =~ ^[Yy]$ ]]; then
   source osx.sh
