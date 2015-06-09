@@ -78,3 +78,6 @@ export NODE_PATH=/usr/local/lib/node_modules
 
 # Postgres.app to path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+
+# NPM Path
+export PATH=$HOME/.node/bin:$PATH
