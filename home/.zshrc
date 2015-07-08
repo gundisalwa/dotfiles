@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Alias
-alias gx='open -a "Gitx"'
+alias st='open -a "Sourcetree"'
 
 export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/npm
 # export MANPATH="/usr/local/man:$MANPATH"
