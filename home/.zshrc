@@ -81,3 +81,6 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # NPM Path
 export PATH=$HOME/.node/bin:$PATH
+
+# Scala Home for IntelliJ ?
+export SCALA_HOME=/usr/local/opt/scala/idea
