@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 # Alias
 alias st='open -a "Sourcetree"'
 
-export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/npm
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -73,14 +73,15 @@ fi
 # Chrome env variable
 export CHROME_BIN=/Applications/Chrome.app/Contents/MacOS/Google\ Chrome
 
-# Node Modules Path
-export NODE_PATH=/usr/local/lib/node_modules
-
-# Postgres.app to path
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+# NVM Dir
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # NPM Path
 export PATH=$HOME/.node/bin:$PATH
+
+# Postgres.app to path
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Scala Home for IntelliJ ?
 export SCALA_HOME=/usr/local/opt/scala/idea
