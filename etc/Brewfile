@@ -36,6 +36,7 @@ install homebrew/dupes/grep
 
 # Install other useful binaries
 install node --without-npm
+install nvm
 install ant
 install scala --with-docs
 

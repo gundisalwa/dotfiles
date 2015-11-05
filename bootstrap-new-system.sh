@@ -40,7 +40,7 @@ else
   echo "\tSkipping brews..."
 fi
 
-read 'npmReply?Tweak OS X? [y/n] '
+read 'npmReply?Install npm stuff? [y/n] '
 if [[ "$npmReply" =~ ^[Yy]$ ]]; then
   source npm.sh
 else
