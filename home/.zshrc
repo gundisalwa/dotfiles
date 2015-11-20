@@ -76,9 +76,8 @@ export CHROME_BIN=/Applications/Chrome.app/Contents/MacOS/Google\ Chrome
 # NVM Dir
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-
-# NPM Path
-export PATH=$HOME/.npm/bin:$PATH
+export PATH=$PATH:$NVM_DIR/versions/node/$(nvm version)/bin
+nvm alias default stable
 
 # Postgres.app to path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
