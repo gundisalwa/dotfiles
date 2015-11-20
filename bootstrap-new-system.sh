@@ -40,11 +40,11 @@ else
   echo "\tSkipping brews..."
 fi
 
-read 'npmReply?Install npm stuff? [y/n] '
+read 'npmReply?Install node stuff? [y/n] '
 if [[ "$npmReply" =~ ^[Yy]$ ]]; then
-  source npm.sh
+  source node.sh
 else
-  echo "\tSkipping npm globals..."
+  echo "\tSkipping node stuff..."
 fi
 
 read 'osxReply?Tweak OS X? [y/n] '
