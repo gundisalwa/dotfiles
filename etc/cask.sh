@@ -16,3 +16,4 @@ brew cask install google-drive
 brew cask install intellij-idea
 brew cask install postgres
 brew cask install atom
+brew cask install microsoft-office
