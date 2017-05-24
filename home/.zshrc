@@ -61,7 +61,7 @@ export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='sbl'
+  export EDITOR=‘atom’
 fi
 
 # Compilation flags
