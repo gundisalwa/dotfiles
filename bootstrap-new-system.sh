@@ -30,7 +30,7 @@ cd etc
 which -s brew
 if [[ $? != 0 ]]; then
   echo 'Installing Homebrew...'
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 read 'osxReply?Tweak OS X? [y/n] '
@@ -40,18 +40,18 @@ else
   echo "\tSkipping OS X tweak..."
 fi
 
-read 'brewReply?Install bundle from etc/Brewfile? [y/n] '
-if [[ "$brewReply" =~ ^[Yy]$ ]]; then
-  source brew.sh
-else
-  echo "\tSkipping brews..."
-fi
-
 read 'caskReply?Install casks from etc/Caskfile? [y/n] '
 if [[ "$caskReply" =~ ^[Yy]$ ]]; then
   source cask.sh
 else
   echo "\tSkipping casks..."
+fi
+
+read 'brewReply?Install bundle from etc/Brewfile? [y/n] '
+if [[ "$brewReply" =~ ^[Yy]$ ]]; then
+  source brew.sh
+else
+  echo "\tSkipping brews..."
 fi
 
 read 'omzReply?Install oh-my-zsh? [y/n] '
@@ -61,18 +61,19 @@ else
   echo "\tSkipping oh-my-zsh install..."
 fi
 
-read 'nvmReply?Install node stuff? [y/n] '
-if [[ "$nvmReply" =~ ^[Yy]$ ]]; then
-  source node.sh
-else
-  echo "\tSkipping node stuff..."
-fi
-
 read "dotfilesReply?Copy dotfiles to home folder? [y/n] "
 if [[ "$dotfilesReply" =~ ^[Yy]$ ]]; then
   source home.sh
 else
   echo "\tSkipping dotfiles copy..."
+fi
+
+
+read 'nvmReply?Install node stuff? [y/n] '
+if [[ "$nvmReply" =~ ^[Yy]$ ]]; then
+  source node.sh
+else
+  echo "\tSkipping node stuff..."
 fi
 
 
