@@ -44,3 +44,6 @@ brew install scala --with-docs
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# Maven
+brew install maven
