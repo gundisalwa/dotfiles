@@ -20,3 +20,4 @@ brew cask install atom
 # brew cask install microsoft-office
 brew cask install slack
 brew cask install bettertouchtool
+brew cask install docker
