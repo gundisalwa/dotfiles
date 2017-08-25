@@ -3,13 +3,20 @@
   ci = commit
   st = status
   br = branch
+  cl = clone
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 [init]
-	templatedir = ~/.git_template
+	#templatedir = ~/.git_template
 [user]
-	email = goncalo.neto@webdetails.pt
+	email = gneto@pentaho.com
 	name = Gundi
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/gneto/.gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
