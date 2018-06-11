@@ -40,18 +40,18 @@ else
   echo "\tSkipping OS X tweak..."
 fi
 
-read 'caskReply?Install casks from etc/Caskfile? [y/n] '
-if [[ "$caskReply" =~ ^[Yy]$ ]]; then
-  source cask.sh
+read 'nvmReply?Install node stuff? [y/n] '
+if [[ "$nvmReply" =~ ^[Yy]$ ]]; then
+source node.sh
 else
-  echo "\tSkipping casks..."
+echo "\tSkipping node stuff..."
 fi
 
 read 'brewReply?Install bundle from etc/Brewfile? [y/n] '
 if [[ "$brewReply" =~ ^[Yy]$ ]]; then
-  source brew.sh
+source brew.sh
 else
-  echo "\tSkipping brews..."
+echo "\tSkipping brews..."
 fi
 
 read 'omzReply?Install oh-my-zsh? [y/n] '
@@ -66,14 +66,6 @@ if [[ "$dotfilesReply" =~ ^[Yy]$ ]]; then
   source home.sh
 else
   echo "\tSkipping dotfiles copy..."
-fi
-
-
-read 'nvmReply?Install node stuff? [y/n] '
-if [[ "$nvmReply" =~ ^[Yy]$ ]]; then
-  source node.sh
-else
-  echo "\tSkipping node stuff..."
 fi
 
 

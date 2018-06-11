@@ -53,6 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias st='open -a "Sourcetree"'
+alias vsc='open -a "Sourcetree"'
 
 export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin
 # export MANPATH="/usr/local/man:$MANPATH"

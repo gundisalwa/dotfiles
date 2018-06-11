@@ -9,6 +9,10 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
+brew tap caskroom/cask
+
+brew cask install java
+
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 # install coreutils
@@ -38,12 +42,37 @@ brew install grep
 
 # Install other useful binaries
 # install node --without-npm
-brew install nvm
 brew install ant
 brew install scala --with-docs
+
+# Maven
+brew install maven
+
+# Yarn
+brew install yarn
 
 # Remove outdated versions from the cellar
 brew cleanup
 
-# Maven
-brew install maven
+
+echo '\tInstalling Casks...'
+
+brew cask install google-chrome
+brew cask install firefox
+brew cask install macvim
+brew cask install franz
+brew cask install visual-studio-code
+brew cask install sourcetree
+brew cask install spotify
+brew cask install github-desktop
+#brew cask install dropbox
+brew cask install google-drive
+#brew cask install intellij-idea
+brew cask install postgres
+#brew cask install atom
+# brew cask install microsoft-office
+brew cask install slack
+brew cask install bettertouchtool
+brew cask install docker
+brew cask install 1password
+

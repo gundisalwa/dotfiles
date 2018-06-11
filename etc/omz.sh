@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
 
 echo "\tInstalling oh-my-zsh..."
-git clone https://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
-chsh -s /bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
