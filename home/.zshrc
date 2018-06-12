@@ -52,8 +52,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Alias
-alias st='open -a "Sourcetree"'
-alias vsc='open -a "Sourcetree"'
 
 export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -62,7 +60,7 @@ export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR=‘atom’
+  export EDITOR=‘code’
 fi
 
 # Compilation flags

@@ -1,4 +1,4 @@
-3#!/usr/bin/env zsh
+#!/usr/bin/env zsh
 
 echo '\tCopying dotfiles to home folder...'
 cp -r ../home/.* $HOME
