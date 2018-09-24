@@ -85,3 +85,8 @@ export SCALA_HOME=/usr/local/opt/scala/idea
 
 # Maven Opts
 export MAVEN_OPTS=-Dpentaho.resolve.repo=http://nexus.pentaho.org/content/groups/omni
+
+# Jenv Opts
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+export JAVA_HOME=$(jenv javahome)
