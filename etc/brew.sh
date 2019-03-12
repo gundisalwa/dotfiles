@@ -47,10 +47,10 @@ brew install ant
 brew install scala --with-docs
 
 # Maven
-brew install maven
+# brew install maven
 
 # Yarn
-brew install yarn
+# brew install yarn
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -76,4 +76,6 @@ brew cask install slack
 brew cask install bettertouchtool
 brew cask install docker
 brew cask install 1password
+brew cask install evernote
+brew cask install postman
 
