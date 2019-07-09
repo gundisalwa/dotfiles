@@ -81,12 +81,12 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
 
 # Scala Home for IntelliJ ?
-export SCALA_HOME=/usr/local/opt/scala/idea
+# export SCALA_HOME=/usr/local/opt/scala/idea
 
 # Maven Opts
-export MAVEN_OPTS=-Dpentaho.resolve.repo=http://nexus.pentaho.org/content/groups/omni
+# export MAVEN_OPTS=-Dpentaho.resolve.repo=http://nexus.pentaho.org/content/groups/omni
 
 # Jenv Opts
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-export JAVA_HOME=$(jenv javahome)
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+# export JAVA_HOME=$(jenv javahome)
