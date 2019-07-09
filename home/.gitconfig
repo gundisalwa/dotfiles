@@ -10,7 +10,7 @@
 [init]
 	#templatedir = ~/.git_template
 [user]
-	email = gneto@pentaho.com
+	email = goncalo.neto@confeur.com
 	name = Gundi
 [core]
 	excludesfile = /Users/gneto/.gitignore
