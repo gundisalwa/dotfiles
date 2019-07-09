@@ -11,8 +11,8 @@ brew upgrade
 
 brew tap caskroom/cask
 
-brew cask install java
-brew install jenv
+#brew cask install java
+#brew install jenv
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -73,9 +73,9 @@ brew cask install postgres
 #brew cask install atom
 # brew cask install microsoft-office
 brew cask install slack
-brew cask install bettertouchtool
+#brew cask install bettertouchtool
 brew cask install docker
 brew cask install 1password
 brew cask install evernote
-brew cask install postman
-
+brew cask install eostman
+brew cask install nordvpn
